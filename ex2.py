@@ -20,9 +20,9 @@ def slowdec(delay = 1):
     def slowdown(func):
         def wrapper (*arg,**kwarg):
             start = time()
+            print (f'Ожидайте задержку {delay} сек. перед выполнением')
             sleep(delay)
             res = func(*arg,**kwarg)
-            print ("вывод декоратора ")
             finish = time()
             print ('Время выполнения',str(finish-start))
             return res
